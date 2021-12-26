@@ -19,3 +19,6 @@ def check_and_send_notification(dataset, config_path, debug: bool = False):
     for row in dataset:
         if row[2] in zips:
             notifications.append(row)
+
+    if notifications:
+        print("SENDING NOTIFICATION", len(notifications))
